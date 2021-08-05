@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import './effects.css';
+import { Message } from './Message';
 export const SimpleForm = () => {
     const [formState, setFormState] = useState({
         name: '',
@@ -10,7 +11,7 @@ export const SimpleForm = () => {
     //Si queremos seguir escuchando se le pasa el valor del componente que queremos oir en lugar del array
     // dejo un ejemplo comentado
    useEffect(() => {
-       console.log('hey');
+       //console.log('hey');
    }, [])
    
    /*useEffect(() => {
@@ -52,6 +53,7 @@ export const SimpleForm = () => {
                     onChange={handleInputChange}
                 />
             </div>
+            {(name === '123') && <Message />}
         </>
     )
 }
